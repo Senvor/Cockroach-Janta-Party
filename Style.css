@@ -1,0 +1,133 @@
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            body{
+                background:#f0cea2;
+                font-family: kode mono, monospace;
+                color:black;
+            }
+            /* TOP HEADER */
+            .top-bar{
+                width: 100%;
+                padding: 20px 40px;
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid rgb(0, 0, 0);
+            }
+            /* LOGO */
+            .logo{
+                width: 52px;
+                height: 52px;
+                object-fit: contain;
+                margin-right: 16px;
+            }
+            /* TEXT */
+            .title-box{
+                display: flex;
+                flex-direction: column;
+            }
+            .main-title{
+                font-size: 26px;
+                font-weight: bold;
+                color: #000000;
+            }
+            .sub-title{
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: #585e68;
+                margin-top: 4px;
+            }
+            /* MOBILE */
+            @media(max-width: 768px){
+                .top-bar{
+                    padding: 20px;
+                }
+                .logo{
+                    width: 44px;
+                    height: 44px;
+                }
+                .main-title{
+                    font-size: 22px;
+                }
+                .sub-title{
+                    font-size: 10px;
+                }
+            }
+            /* NAVIGATION */
+            .origin{
+                margin-left: 150px;
+                align-items: center;
+                position: relative;
+                text-decoration:none;
+                color: black;
+                font-family: Kode Mono, monospace;
+                font-size: 20px;
+                font-weight: semibold;
+            }
+            .origin::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 0%;
+                height: 2px;
+                background: blue;
+                transition: width 0.2s ease;
+            }
+
+            .origin:hover::after {
+                width: 100%;
+            }
+
+            .manifesto{
+                margin-left: 30px;
+                align-items: center;
+                position: relative;
+                text-decoration:none;
+                color: black;
+                font-family: Kode Mono, monospace;
+                font-size: 20px;
+                font-weight: semibold;
+            }
+            .manifesto::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 0%;
+                height: 2px;
+                background: blue;
+                transition: width 0.2s ease;
+            }
+
+            .manifesto:hover::after {
+                width: 100%;
+            }
+
+            .contact{
+                margin-left: 30px;
+                align-items: center;
+                position: relative;
+                text-decoration:none;
+                color: black;
+                font-family: Kode Mono, monospace;
+                font-size: 20px;
+                font-weight: semibold;
+            }
+            .contact::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 0%;
+                height: 2px;
+                background: blue;
+                transition: width 0.2s ease;
+            }
+
+            .contact:hover::after {
+                width: 100%;
+            }
