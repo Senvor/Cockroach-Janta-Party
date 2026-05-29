@@ -4,26 +4,34 @@
             box-sizing: border-box;
         }
             body{
-                background:#f0cea2;
-                font-family: kode mono, monospace;
-                color:black;
+                margin: 0;
+                min-height: 100vh;
+                background: linear-gradient(
+                            135deg,
+                             #fff5dc 0%,
+                             #ffddaf 35%,
+                             #ffc680 70%,
+                             #ffb86b 100%
+                            );
+                background-attachment: fixed;
+                font-family: 'kode mono', monospace;
             }
-            /* TOP HEADER */
+
             .top-bar{
                 width: 100%;
+                position: sticky;
+                top: 0;
                 padding: 20px 40px;
                 display: flex;
                 align-items: center;
                 border-bottom: 2px solid rgb(0, 0, 0);
             }
-            /* LOGO */
             .logo{
                 width: 52px;
                 height: 52px;
                 object-fit: contain;
                 margin-right: 16px;
             }
-            /* TEXT */
             .title-box{
                 display: flex;
                 flex-direction: column;
@@ -40,7 +48,7 @@
                 color: #585e68;
                 margin-top: 4px;
             }
-            /* MOBILE */
+
             @media(max-width: 768px){
                 .top-bar{
                     padding: 20px;
@@ -56,14 +64,13 @@
                     font-size: 10px;
                 }
             }
-            /* NAVIGATION */
+
             .origin{
                 margin-left: 150px;
                 align-items: center;
                 position: relative;
                 text-decoration:none;
                 color: black;
-                font-family: Kode Mono, monospace;
                 font-size: 20px;
                 font-weight: semibold;
             }
@@ -77,7 +84,6 @@
                 background: blue;
                 transition: width 0.2s ease;
             }
-
             .origin:hover::after {
                 width: 100%;
             }
@@ -88,7 +94,6 @@
                 position: relative;
                 text-decoration:none;
                 color: black;
-                font-family: Kode Mono, monospace;
                 font-size: 20px;
                 font-weight: semibold;
             }
@@ -102,7 +107,6 @@
                 background: blue;
                 transition: width 0.2s ease;
             }
-
             .manifesto:hover::after {
                 width: 100%;
             }
@@ -113,7 +117,6 @@
                 position: relative;
                 text-decoration:none;
                 color: black;
-                font-family: Kode Mono, monospace;
                 font-size: 20px;
                 font-weight: semibold;
             }
@@ -127,7 +130,105 @@
                 background: blue;
                 transition: width 0.2s ease;
             }
-
             .contact:hover::after {
                 width: 100%;
+            }
+
+            .join{
+                margin-left: 250px;
+                font-family: 'Press Start 2P', monospace;
+                font-size: 20px;
+                text-decoration: none;
+                color: #4a356d;
+                padding: 10px 18px;
+                background: #e8e3d8;
+                border-top: 3px solid #ffffff;
+                border-left: 3px solid #ffffff;
+                border-right: 3px solid #555555;
+                border-bottom: 3px solid #555555;
+                display: inline-block;
+                transition: 0.12s ease;
+                box-shadow:
+                inset 1px 1px 0 #ffffff,
+                inset -1px -1px 0 #999999;
+            }
+            .join:hover{
+                transform: translateY(-3px);
+                box-shadow:
+                0 4px 0 #777,
+                inset 1px 1px 0 #ffffff,
+                inset -1px -1px 0 #999999;
+            }
+            .join:active{
+                transform: translateY(2px);
+                border-top: 3px solid #555555;
+                border-left: 3px solid #555555;
+                border-right: 3px solid #ffffff;
+                border-bottom: 3px solid #ffffff;
+            }
+
+             .hero{
+                width:100%;
+                min-height:85vh;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                padding:80px 60px;
+                position:relative;
+                overflow:hidden;
+            }
+            .hero::before{
+                content:"";
+                position:absolute;
+                inset:0;
+                background-image:
+                linear-gradient(rgba(0,0,0,0.04) 1px,transparent 1px),
+                linear-gradient(90deg,rgba(0,0,0,0.04) 1px,transparent 1px);
+                background-size:40px 40px;
+                pointer-events:none;
+            }
+            .hero-left{
+                width:55%;
+                position:relative;
+                z-index:2;
+            }
+            .hero-text{
+                max-width:750px;
+                font-family:'bowlby one',bold;
+                font-size:64px;
+                font-weight:500;
+                line-height:1.15;
+                color:#1A120B;
+            }
+            .special{
+                font-size:74px;
+                font-family:'Anton',sans-serif;
+                color:#C65D07;
+                letter-spacing:2px;
+            }
+            .italic-word{
+                font-family:'Cormorant Garamond',serif;
+                font-style:italic;
+                font-size:94px;
+                color:#1F6B3A;
+            }
+            .hero-right{
+                width:40%;
+                display:flex;
+                justify-content:center;
+                position:relative;
+                z-index:2;
+            }
+            .hero-right img{
+                width:100%;
+                max-width:500px;
+                object-fit:cover;
+                border:4px solid #1A120B;
+                border-radius:12px;
+                transform:rotate(2deg);
+                box-shadow:14px 14px 0px #C65D07;
+                transition:0.4s ease;
+            }
+            .hero-right img:hover{
+                transform:rotate(0deg) scale(1.02);
             }
