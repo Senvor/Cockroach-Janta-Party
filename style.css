@@ -1,12 +1,12 @@
-        *{
+        *,
+        *::before,
+        *::after{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
             body{
                 padding-top:50px;
-                margin: 0;
-                min-height: 100vh;
                 background: linear-gradient(
                             135deg,
                              #fff5dc 0%,
@@ -30,10 +30,10 @@
                 z-index: 100;
                 background: linear-gradient(
                             135deg,
-                             #fff5dc 0%,
-                             #ffddaf 35%,
-                             #ffc680 70%,
-                             #ffb86b 100%
+                             #fff5dcfb 0%,
+                             #ffdeaffa 35%,
+                             #ffc680fb 70%,
+                             #ffb86bfb 100%
                             );
             }
             .logo{
@@ -323,12 +323,11 @@
             }
 
             .chapter{
-                font-family:'Kode Mono',monospace;
+                font-family:'Monoton',cursive;
                 font-size:1rem;
                 letter-spacing:3px;
                 text-transform:uppercase;
-                color:#1A120B;
-                margin:0;
+                color:#000000;
             }
 
             .section-origin{
@@ -358,7 +357,7 @@
                 text-transform:uppercase;
                 letter-spacing:4px;
                 margin-bottom:40px;
-                font-family:'Monoton',cursive;
+                font-family:'Bowlby One',cursive;
             }
 
             .timeline{
@@ -418,7 +417,7 @@
                 background:#f7edd2;
                 border:4px solid #000;
                 padding:25px;
-                box-shadow:8px 8px 0 #000;
+                box-shadow:8px 8px 0 #1A120B;
                 transform:rotate(-1deg);
                 transition:.3s;
             }
@@ -430,6 +429,7 @@
             .timeline-content:hover,
             .timeline-item:nth-child(even) .timeline-content:hover{
                 transform:rotate(0deg) scale(1.03);
+                box-shadow:8px 8px 0 #1a120be2;
             }
 
             .date{
