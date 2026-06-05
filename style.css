@@ -158,7 +158,6 @@
 
              .info{
                 width:100%;
-                min-height:85vh;
                 display:flex;
                 justify-content:space-between;
                 align-items:center;
@@ -321,4 +320,137 @@
                 to{
                     transform:translateX(-50%);
                 }
+            }
+
+            .chapter{
+                font-family:'Kode Mono',monospace;
+                font-size:1rem;
+                letter-spacing:3px;
+                text-transform:uppercase;
+                color:#1A120B;
+                margin:0;
+            }
+
+            .section-origin{
+                width:100%;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                padding:80px 60px;
+                position:relative;
+                overflow:hidden;
+                gap:16px;
+            }
+            .section-origin::before{
+                content:"";
+                position:absolute;
+                inset:0;
+                background-image:
+                linear-gradient(rgba(0,0,0,0.04) 1px,transparent 1px),
+                linear-gradient(90deg,rgba(0,0,0,0.04) 1px,transparent 1px);
+                background-size:40px 40px;
+                pointer-events:none;
+            }
+
+            .section-title{
+                text-align:center;
+                font-size:clamp(4rem,8vw,6rem);
+                text-transform:uppercase;
+                letter-spacing:4px;
+                margin-bottom:40px;
+                font-family:'Monoton',cursive;
+            }
+
+            .timeline{
+                position:relative;
+                max-width:1000px;
+                margin:auto;
+            }
+
+            .timeline::before{
+                content:"";
+                position:absolute;
+                left:50%;
+                transform:translateX(-50%);
+                width:8px;
+                height:100%;
+                background:#2b1d0e;
+                border:2px solid #000;
+            }
+
+            .timeline-item{
+                width:50%;
+                position:relative;
+                margin-bottom:60px;
+            }
+
+            .timeline-item:nth-child(odd){
+                left:0;
+                padding-right:50px;
+            }
+
+            .timeline-item:nth-child(even){
+                left:50%;
+                padding-left:50px;
+            }
+
+            .timeline-dot{
+                position:absolute;
+                top:35px;
+                width:24px;
+                height:24px;
+                background:#c0392b;
+                border:4px solid #000;
+                border-radius:50%;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot{
+                right:-16px;
+            }
+
+            .timeline-item:nth-child(even) .timeline-dot{
+                left:-16px;
+            }
+
+            .timeline-content{
+                position:relative;
+                z-index:2;
+                background:#f7edd2;
+                border:4px solid #000;
+                padding:25px;
+                box-shadow:8px 8px 0 #000;
+                transform:rotate(-1deg);
+                transition:.3s;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content{
+                transform:rotate(1deg);
+            }
+
+            .timeline-content:hover,
+            .timeline-item:nth-child(even) .timeline-content:hover{
+                transform:rotate(0deg) scale(1.03);
+            }
+
+            .date{
+                display:inline-block;
+                background:#c0392b;
+                color:#fff;
+                padding:6px 12px;
+                font-weight:bold;
+                border:2px solid #000;
+                margin-bottom:12px;
+            }
+
+            .timeline-content h3{
+                margin:0 0 10px;
+                text-transform:uppercase;
+                font-size:1.5rem;
+                font-family:"Bebas Neue",sans-serif;
+                letter-spacing:1px;
+            }
+
+            .timeline-content p{
+                line-height:1.7;
+                font-family:"Special Elite",cursive;
             }
