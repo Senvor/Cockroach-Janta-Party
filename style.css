@@ -12,6 +12,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         :root{
             --color-orange: #CC5500;
             --color-forest: #083D28;
@@ -23,6 +24,32 @@
             --color-shadow: #1A120B;
             --color-pressed-shadow: #1a120be2;
         }
+        
+        html{
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeUp{
+                from{
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+
+                to{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+        @keyframes scroll{
+                from{
+                    transform:translateX(0);
+                }
+                to{
+                    transform:translateX(-50%);
+                }
+            }
+
             body{
                 padding-top:50px;
                 background: linear-gradient(
@@ -215,6 +242,8 @@
                 line-height: 1.15;
                 color: var(--color-shadow);
                 margin-bottom: 24px;
+                opacity: 0;
+                animation: fadeUp 1s ease forwards;
             }
             .system{
                 font-size: 74px;
@@ -233,6 +262,9 @@
                 display: flex;
                 gap: 18px;
                 align-items: center;
+                opacity: 0;
+                animation: fadeUp 1s ease forwards;
+                animation-delay: 0.3s;
             }
             .volunteer{
                 display: inline-block;
@@ -272,11 +304,14 @@
             }
 
             .info-right{
-                 position: relative;
-                 width: 100%;
-                 max-width: 380px;
-                 margin-left: -40px;
-                 transition: 0.3s;
+                position: relative;
+                width: 100%;
+                max-width: 380px;
+                margin-left: -40px;
+                transition: 0.3s;
+                opacity: 0;
+                animation: fadeUp 1s ease forwards;
+                animation-delay: 0.6s;
             }
 
             .info-right img{
@@ -343,16 +378,8 @@
                 margin: 0 12px;
             }
 
-            @keyframes scroll{
-                from{
-                    transform:translateX(0);
-                }
-                to{
-                    transform:translateX(-50%);
-                }
-            }
-
             .section-origin{
+                scroll-margin-top: 90px;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -485,6 +512,7 @@
             }
 
             .section-manifesto{
+                scroll-margin-top: 90px;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
