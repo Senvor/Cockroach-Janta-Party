@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
         *,
@@ -490,8 +489,7 @@
                 background:
                 radial-gradient(
                 circle at 30% 30%,
-                #ffffff,
-                var(--color-red) 60%
+                #d20a0a
                 );
                 border: 2px solid var(--color-border);
                 box-shadow:
@@ -855,7 +853,6 @@
                 transition: 0.3s ease;
                 z-index: 9998;
             }
-
             .secret-overlay.show{
                 opacity: 1;
                 pointer-events: auto;
@@ -880,7 +877,6 @@
                 transition: 0.35s ease;
                 z-index: 9999;
             }
-
             .secret-poster.show{
                 opacity: 1;
                 transform:
@@ -902,7 +898,6 @@
                 cursor: pointer;
                 transition: 0.25s ease;
             }
-
             .secret-close:hover{
                 transform: rotate(90deg);
                 background: var(--color-orange);
@@ -913,22 +908,206 @@
                 display: inline-block;
                 margin-bottom: 15px;
                 padding: 6px 12px;
-                background: var(--color-red);
-                color: white;
+                background: var(--color-brown);
+                color: black;
+                letter-spacing: 2px;
+                font-size: 35px;
+                font-family: 'Anton', sans-serif;
                 font-weight: bold;
                 transform: rotate(-4deg);
             }
-
             .secret-poster h3{
+                font-family:'Courier New', Courier, monospace;
                 margin-bottom: 15px;
                 color: var(--color-orange);
             }
-
             .secret-poster p{
                 margin-bottom: 12px;
                 color: var(--color-paper-text);
             }
+
+            .secret-poster p.secret-status{
+                font-weight: bold;
+                color: var(--color-maroon);
+                font-family: 'Share Tech Mono', sans-serif;
+            }
+
+            .protest-page{
+                margin-top: 0;
+                padding: 48px 40px 40px;
+            }
+
+            .protest-hero{
+                text-align: center;
+                margin-bottom: 96px;
+                padding-top: 8px;
+            }
+
+            .hero-card{
+                display: inline-block;
+                padding: 36px 48px;
+                border: 6px solid var(--color-border);
+                background: white;
+                box-shadow: 12px 12px 0 var(--color-orange);
+                transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+            }
+
+            .hero-card:hover{
+                transform: translateY(-8px);
+                box-shadow: 18px 18px 0 rgba(204,85,0,0.9);
+                border-color: var(--color-forest);
+                background: #fff9f0;
+            }
+
+            .hero-title{
+                font-family: 'Bungee', sans-serif;
+                font-size: 48px;
+                margin-bottom: 8px;
+                color: var(--color-maroon);
+                transition: color 0.25s ease, transform 0.25s ease;
+            }
+
+            .hero-card:hover .hero-title{
+                color: var(--color-forest);
+                transform: scale(1.02);
+            }
+
+            .hero-subtitle{
+                font-size: 16px;
+                color: var(--color-gray);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .back-button{
+                position: fixed;
+                left: 12px;
+                top: 12px;
+                z-index: 110;
+                text-decoration: none;
+                background: var(--color-paper);
+                color: var(--color-maroon);
+                border: 4px solid var(--color-border);
+                padding: 8px 12px;
+                font-weight: 700;
+                box-shadow: 4px 4px 0 var(--color-shadow);
+                display: inline-block;
+                transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+            }
+
+            .back-button:hover{
+                transform: translateY(-3px);
+                box-shadow: 6px 6px 0 rgba(26,18,11,0.8);
+                background: #fff8d8;
+                border-color: var(--color-forest);
+            }
+
+            .back-button--icon{
+                width: 44px;
+                height: 44px;
+                padding: 0;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                border-radius: 6px;
+            }
+
+            .back-button--icon svg{
+                width: 18px;
+                height: 18px;
+                display: block;
+            }
+
+            .protest-grid{
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 36px;
+                align-items: start;
+            }
+
+            .protest-section-title{
+                margin-bottom: 16px;
+                font-family: 'Bungee', sans-serif;
+                transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+            }
+
+            .protest-section-title:hover{
+                color: var(--color-maroon);
+                transform: translateX(2px);
+                text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+            }
+
+            .protest-upcoming-title{
+                color: var(--color-forest);
+            }
+
+            .protest-list{
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .protest-card{
+                padding: 28px 30px;
+                border: 4px solid var(--color-border);
+                background: var(--color-paper);
+                box-shadow: 10px 10px 0 var(--color-shadow);
+                min-height: 220px;
+                transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+            }
             
+            .protest-card:hover{
+                transform: translate(5px,5px);
+                box-shadow:
+                5px 5px 0 var(--color-shadow);
+            }
+
+            .protest-card-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 24px;
+            }
+
+            .protest-event-title{
+                font-size: 22px;
+            }
+
+            .protest-event-location{
+                color: var(--color-gray);
+                font-size: 15px;
+                margin-top: 8px;
+            }
+
+            .protest-event-meta{
+                text-align: right;
+            }
+
+            .protest-status{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 8px;
+                padding: 5px 10px;
+                border-radius: 999px;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+            }
+
+            .protest-status--completed{
+                color: #155724;
+                background: #d4edda;
+                border: 1px solid #c3e6cb;
+            }
+
+            .protest-event-meta div{
+                margin-top: 6px;
+                font-weight: bold;
+            }
+
             @media (max-width: 768px){
                 
                 .top-bar{
@@ -1009,6 +1188,10 @@
                 .section-contact{
                     padding-left: 20px;
                     padding-right: 20px;
+                }
+
+                .protest-hero{
+                    margin-bottom: 40px;
                 }
 
                 .manifesto-paper{

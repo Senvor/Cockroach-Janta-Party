@@ -45,88 +45,68 @@ titles.forEach((title) => {
 
 });
 
-const logo =
-document.querySelector(".logo");
+const logo = document.querySelector(".logo");
 
-const secretPoster =
-document.querySelector(".secret-poster");
+const secretPoster = document.querySelector(".secret-poster");
 
-const secretClose =
-document.querySelector(".secret-close");
+const secretClose = document.querySelector(".secret-close");
 
-const overlay =
-document.querySelector(".secret-overlay");
+const overlay = document.querySelector(".secret-overlay");
 
 let secretClicks = 0;
 
-logo.addEventListener("click", () => {
-
+if (logo) {
+    logo.addEventListener("click", () => {
         secretClicks++;
-
-        if(secretClicks === 5){
-
-                secretPoster.classList.add(
-                        "show"
-                );
-
-                overlay.classList.add(
-                        "show"
-                );
-
-                secretClicks = 0;
+        if (secretClicks === 5) {
+            if (secretPoster) secretPoster.classList.add("show");
+            if (overlay) overlay.classList.add("show");
+            secretClicks = 0;
         }
-
-});
-
-secretClose.addEventListener("click", () => {
-
-        secretPoster.classList.remove(
-                "show"
-        );
-
-        overlay.classList.remove(
-                "show"
-        );
-
-});
-
-overlay.addEventListener("click", () => {
-
-        secretPoster.classList.remove(
-                "show"
-        );
-
-        overlay.classList.remove(
-                "show"
-        );
-
-});
-
-const stamp =
-document.querySelector(
-        ".cockroach-stamp"
-);
-
-const stampObserver =
-new IntersectionObserver(
-
-(entries)=>{
-
-        if(entries[0].isIntersecting){
-
-                stamp.classList.add(
-                        "show"
-                );
-
-                stampObserver.disconnect();
-        }
-
-},
-
-{
-        threshold: 0.7
+    });
 }
 
-);
+if (secretClose) {
+    secretClose.addEventListener("click", () => {
+        if (secretPoster) secretPoster.classList.remove("show");
+        if (overlay) overlay.classList.remove("show");
+    });
+}
 
-stampObserver.observe(stamp);
+if (overlay) {
+    overlay.addEventListener("click", () => {
+        if (secretPoster) secretPoster.classList.remove("show");
+        overlay.classList.remove("show");
+    });
+}
+
+const stamp = document.querySelector(".cockroach-stamp");
+
+if (stamp) {
+    const stampObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            stamp.classList.add("show");
+            stampObserver.disconnect();
+        }
+    }, { threshold: 0.7 });
+    stampObserver.observe(stamp);
+}
+
+// Back button handler: use history.back() with a safe fallback
+(function () {
+        var back = document.querySelector('.back-button');
+        if (!back) return;
+        back.addEventListener('click', function (e) {
+                e.preventDefault();
+                try {
+                        if (window.history && window.history.length > 1) {
+                                window.history.back();
+                        } else {
+                                // fallback to home
+                                window.location.href = 'index.html';
+                        }
+                } catch (err) {
+                        window.location.href = 'index.html';
+                }
+        });
+})();
