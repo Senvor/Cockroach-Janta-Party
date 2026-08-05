@@ -6,7 +6,7 @@ A satirical political movement website archive inspired by the rapid rise of the
 
 https://cockroach-janta-party-six.vercel.app/
 
-## Lnading Page
+## Landing Page
 
 ![Landing page](./screenshots/hero-section.png)
 
