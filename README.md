@@ -2,6 +2,8 @@
 
 A satirical political movement website archive inspired by the rapid rise of the Cockroach Janta Party (CJP), one of India's most talked-about internet-born youth movements.
 
+![Hackatime](https://hackatime.hackclub.com/api/v1/badge/U0B4TE3MN1G/Senvor/Cockroach-Janta-Party)
+
 ## Live Preview
 
 https://cockroach-janta-party-six.vercel.app/
