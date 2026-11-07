@@ -1243,7 +1243,7 @@
                 .title-box{ text-align: left; flex: 1; min-width: 0; }
                 .main-title{ font-size: 1.15rem; }
                 .sub-title{ font-size: .62rem; letter-spacing: .5px; }
-                .nav-bar{ order: 3; width: 100%; justify-content: space-around; gap: 8px; }
+                .nav-bar{ order: 3; flex: 0 0 100%; justify-content: space-around; gap: 8px; font-size: 1rem; }
                 .join{ width: auto; padding: 8px 12px; font-size: .85rem; }
                 .info{ padding: 40px 18px 50px; }
                 .info-left{ width: 100%; padding-right: 0; align-items: center; }
