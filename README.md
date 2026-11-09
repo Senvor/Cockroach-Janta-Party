@@ -6,7 +6,7 @@ A satirical political movement website archive inspired by the rapid rise of the
 
 ## Live Preview
 
-https://cockroach-janta-party-six.vercel.app/
+https://cockroachjantaparty.senvor.dev/
 
 ## Landing Page
 
@@ -25,7 +25,7 @@ https://cockroach-janta-party-six.vercel.app/
 * HTML
 * CSS
 * JavaScript
-* Vercel
+* GitHub Pages
 
 ## Design Philosophy
 
