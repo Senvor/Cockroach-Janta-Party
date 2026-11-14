@@ -117,7 +117,3 @@ All trademarks, logos, names, and references belong to their respective owners.
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-## Author
-
-Developed by Senvor.
